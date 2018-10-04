@@ -1,12 +1,96 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Invoice
     </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="primary" (click)="exportPdf()">
+        <ion-icon slot="icon-only" name="print"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+  <div class="printable-content">
+    <div class="printable-area" id="printable-area">
+      <table class="header-table">
+        <tr>
+          <td width="40%" class="title">INVOICE</td>
+          <td width="60%">
+            <table width="100%">
+              <tr>
+                <td width="50%">+677-12332-1222</td>
+                <td width="50%">Your Address 1st</td>
+              </tr>
+              <tr>
+                <td>your@email.com</td>
+                <td>City, State, Country</td>
+              </tr>
+              <tr>
+                <td>yourwebsite.com</td>
+                <td>Post Code</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <table class="subheader-table">
+        <tr>
+          <td width="30%">
+            <dt>Billed To:</dt>
+            <dd>Client Name</dd>
+            <dd>Address 1st Line</dd>
+            <dd>City, State, Country</dd>
+            <dd>Post Code</dd>
+          </td>
+          <td width="30%">
+            <dt>Invoice Number:</dt>
+            <dd>009223-222</dd>
+          </td>
+          <td width="40%">
+            <dt>Invoice Total:</dt>
+            <dd>$6.600</dd>
+          </td>
+        </tr>
+      </table>
+      <h3>Invoice Details</h3>
+      <table class="detail-table">
+        <tr>
+          <th width="50%">Description</th>
+          <th width="20%">Unit Price</th>
+          <th width="10%">Qty</th>
+          <th width="20%">Amount</th>
+        </tr>
+        <tr>
+          <td>Apple Macbook Pro Retina 2018</td>
+          <td>$4.500</td>
+          <td>1</td>
+          <td>$4.500</td>
+        </tr>
+        <tr>
+          <td>Apple Mouse Bluetooth</td>
+          <td>$500</td>
+          <td>1</td>
+          <td>$500</td>
+        </tr>
+        <tr>
+          <td>Apple Cinema Display</td>
+          <td>$1.000</td>
+          <td>1</td>
+          <td>$1.000</td>
+        </tr>
+      </table>
+      <table class="footer-table">
+        <tr>
+          <td width="80%">Sub Total: </td>
+          <td width="20%">$6.000</td>
+        </tr>
+        <tr>
+          <td>Tax: </td>
+          <td>$600</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </ion-content>
